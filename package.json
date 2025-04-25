@@ -42,6 +42,18 @@
         "react/dist/*",
         "react/package.json"
     ],
+    "exports": {
+        ".": {
+            "types": "./dist/module.d.ts",
+            "import": "./dist/module.js",
+            "require": "./dist/main.js"
+        },
+        "./react": {
+            "types": "./react/dist/types/index.d.ts",
+            "import": "./react/dist/esm/index.js",
+            "require": "./react/dist/umd/index.js"
+        }
+    },
     "dependencies": {
         "core-js": "^3.38.1",
         "fflate": "^0.4.8",
